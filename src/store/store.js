@@ -7,9 +7,11 @@ import {
 import ReduxThunk from 'redux-thunk';
 
 import { authReducer } from '../reducers/authReducer';
+import { uiReducer } from '../reducers/uiReducer';
 
 const reducers = combineReducers({
-  auth: authReducer
+  auth: authReducer,
+  ui: uiReducer
 });
 
 // without combineReducers
