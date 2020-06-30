@@ -7,6 +7,7 @@ import {
 } from 'react-redux';
 
 import { useForm } from '../../hooks/useForm';
+import { startRegisterWithEmailPasswordName } from '../../actions/auth';
 import {
   setError,
   removeError
@@ -29,6 +30,7 @@ export const RegisterScreen = () => {
     event.preventDefault();
     if(isFormValid()) {
       console.log(name, email, password, password2);
+      dispatch(startRegisterWithEmailPasswordName(email, password, name));
     }
 
     handleReset();
