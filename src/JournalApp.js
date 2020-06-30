@@ -1,15 +1,8 @@
 import React from 'react';
 
-import './styles/styles.scss';
+import { AppRouter } from './routers/AppRouter';
 
-const JournalApp = () => {
-  return(
-    <>
-      <h1>Journal App</h1>
-      <hr />
-    </>
-  );
-}
+const JournalApp = () => <AppRouter />;
 
 export default JournalApp;
 
