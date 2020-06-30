@@ -27,7 +27,8 @@ Without dependencies
 ```shell
 docker-compose run app yarn add node-sass react-router-dom
 docker-compose run app yarn add react-redux redux
-docker-compose run app yanr add firebase redux-thunk
+docker-compose run app yarn add firebase redux-thunk
+docker-compose run app yarn add validator
 ```
 
 ### Project Structure
