@@ -1,5 +1,21 @@
 # Journal App
 
+- [React Router][react_router]
+
+- [Font Awesome][font_awesome]
+
+- [Redux][reduxjs]
+- [React Redux][react_redux]
+- [Redux devtools][redux_devtools]
+
+[react_router]: https://reacttraining.com/react-router/web/guides/quick-start
+
+[font_awesome]: https://cdnjs.com/libraries/font-awesome
+
+[reduxjs]: https://es.redux.js.org/
+[react_redux]: https://react-redux.js.org/
+[redux_devtools]: https://github.com/zalmoxisus/redux-devtools-extension#usage
+
 ### Installs
 
 With `package.json` and dependencies
@@ -10,6 +26,7 @@ docker-compose run app yarn
 Without dependencies
 ```shell
 docker-compose run app yarn add node-sass react-router-dom
+docker-compose run app yarn add react-redux redux
 ```
 
 ### Project Structure
