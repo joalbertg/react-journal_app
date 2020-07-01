@@ -29,7 +29,6 @@ export const RegisterScreen = () => {
   const handleRegister = event => {
     event.preventDefault();
     if(isFormValid()) {
-      console.log(name, email, password, password2);
       dispatch(startRegisterWithEmailPasswordName(email, password, name));
     }
 
@@ -96,6 +95,7 @@ export const RegisterScreen = () => {
         <button
           type='submit'
           className='btn btn-primary btn-block mb-5'
+          disabled={loading}
         >
           Register
         </button>

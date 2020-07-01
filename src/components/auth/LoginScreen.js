@@ -33,6 +33,7 @@ export const LoginScreen = () => {
       return false;
     }
 
+    dispatch(removeError());
     return true;
   }
 
@@ -76,6 +77,7 @@ export const LoginScreen = () => {
         <button
           type='submit'
           className='btn btn-primary btn-block'
+          disabled={loading}
         >
           Login
         </button>
