@@ -37,7 +37,7 @@ const AppRouter = () => {
 
   if(checking) {
     return(
-      <h2>Checking...</h2>
+      <h2>Wait...</h2>
     );
   }
 

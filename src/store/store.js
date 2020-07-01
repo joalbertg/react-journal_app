@@ -8,12 +8,14 @@ import ReduxThunk from 'redux-thunk';
 
 import {
   authReducer,
-  uiReducer
+  uiReducer,
+  notesReducer
 } from '../reducers';
 
 const reducers = combineReducers({
   auth: authReducer,
-  ui: uiReducer
+  ui: uiReducer,
+  notes: notesReducer
 });
 
 // without combineReducers
