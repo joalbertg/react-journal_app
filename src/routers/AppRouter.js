@@ -6,14 +6,16 @@ import {
   Redirect
 } from "react-router-dom";
 
-import { AuthRouter } from './AuthRouter';
-import { JournalScreen } from '../components/journal/JournalScreen';
-import { firebase } from '../firebase/firebase-config';
+import {
+  PrivateRoute,
+  PublicRoute,
+  AuthRouter
+} from './';
+import JournalScreen from '../components/journal';
+import firebase from '../firebase';
 import { login } from '../actions/auth';
-import { PublicRoute } from './PublicRoute';
-import { PrivateRoute } from './PrivateRoute';
 
-export const AppRouter = () => {
+const AppRouter = () => {
   const dispatch = useDispatch();
   const [checking, setChecking] = useState(true);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -60,4 +62,6 @@ export const AppRouter = () => {
     </Router>
   );
 }
+
+export default AppRouter;
 

@@ -1,12 +1,9 @@
-import {
-  firebase,
-  googleAuthProvider
-} from '../firebase/firebase-config';
+import firebase, { googleAuthProvider } from '../firebase';
 import {
   startLoading,
   finishLoading
 } from './ui';
-import { types } from '../types/types';
+import types from '../types';
 
 export const startLoginEmailPassword = (email, password) => {
   // this dispatch comes from thunk

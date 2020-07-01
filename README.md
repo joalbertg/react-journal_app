@@ -42,39 +42,64 @@ docker-compose run app yarn add validator
 ├── package.json
 ├── src
 │   ├── JournalApp.js
+│   ├── actions
+│   │   ├── auth.js
+│   │   ├── index.js
+│   │   └── ui.js
 │   ├── components
 │   │   ├── auth
 │   │   │   ├── LoginScreen.js
-│   │   │   └── RegisterScreen.js
+│   │   │   ├── RegisterScreen.js
+│   │   │   └── index.js
 │   │   ├── journal
 │   │   │   ├── JournalEntries.js
 │   │   │   ├── JournalEntry.js
 │   │   │   ├── JournalScreen.js
 │   │   │   ├── NothingSelected.js
-│   │   │   └── Sidebar.js
+│   │   │   ├── Sidebar.js
+│   │   │   └── index.js
 │   │   └── notes
 │   │       ├── NotesAppBar.js
-│   │       └── NotesScreen.js
+│   │       ├── NotesScreen.js
+│   │       └── index.js
+│   ├── firebase
+│   │   ├── firebase-config.js
+│   │   └── index.js
+│   ├── hooks
+│   │   └── useForm.js
 │   ├── index.js
+│   ├── reducers
+│   │   ├── authReducer.js
+│   │   ├── index.js
+│   │   └── uiReducer.js
 │   ├── routers
 │   │   ├── AppRouter.js
-│   │   └── AuthRouter.js
-│   └── styles
-│       ├── base
-│       │   ├── _base.scss
-│       │   └── _settings.scss
-│       ├── components
-│       │   ├── _auth.scss
-│       │   ├── _buttons.scss
-│       │   ├── _journal.scss
-│       │   ├── _links.scss
-│       │   ├── _notes.scss
-│       │   └── _nothing.scss
-│       └── styles.scss
-├── yarn-error.log
+│   │   ├── AuthRouter.js
+│   │   ├── PrivateRoute.js
+│   │   ├── PublicRoute.js
+│   │   └── index.js
+│   ├── store
+│   │   ├── index.js
+│   │   └── store.js
+│   ├── styles
+│   │   ├── base
+│   │   │   ├── _base.scss
+│   │   │   └── _settings.scss
+│   │   ├── components
+│   │   │   ├── _auth.scss
+│   │   │   ├── _buttons.scss
+│   │   │   ├── _journal.scss
+│   │   │   ├── _links.scss
+│   │   │   ├── _notes.scss
+│   │   │   └── _nothing.scss
+│   │   └── styles.scss
+│   └── types
+│       ├── index.js
+│       └── types.js
 └── yarn.lock
 
-9 directories, 28 files
+15 directories, 46 files
+
 ```
 
 ### Start Project

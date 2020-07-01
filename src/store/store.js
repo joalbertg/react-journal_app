@@ -6,8 +6,10 @@ import {
 } from 'redux';
 import ReduxThunk from 'redux-thunk';
 
-import { authReducer } from '../reducers/authReducer';
-import { uiReducer } from '../reducers/uiReducer';
+import {
+  authReducer,
+  uiReducer
+} from '../reducers';
 
 const reducers = combineReducers({
   auth: authReducer,
@@ -25,10 +27,12 @@ const reducers = combineReducers({
 
 const composeEnhancers = (typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
 
-export const store = createStore(
+const store = createStore(
   reducers, /* preloadedState, */
   composeEnhancers(
     applyMiddleware(ReduxThunk)
   )
 );
+
+export default store;
 

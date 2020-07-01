@@ -5,8 +5,10 @@ import {
   Redirect
 } from "react-router-dom";
 
-import { LoginScreen } from '../components/auth/LoginScreen';
-import { RegisterScreen } from '../components/auth/RegisterScreen';
+import {
+  LoginScreen,
+  RegisterScreen
+} from '../components/auth';
 
 export const AuthRouter = () => {
   return(
@@ -22,3 +24,4 @@ export const AuthRouter = () => {
     </div>
   );
 }
+

@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 
 import { JournalEntries } from './JournalEntries';
-import { startLogout } from '../../actions/auth';
+import { startLogout } from '../../actions';
 
 export const Sidebar = () => {
   const dispatch = useDispatch();

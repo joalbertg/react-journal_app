@@ -2,9 +2,9 @@ import React from 'react';
 
 import { Sidebar } from './Sidebar';
 //import { NothingSelected } from './NothingSelected';
-import { NoteScreen } from '../notes/NotesScreen';
+import NoteScreen from '../notes';
 
-export const JournalScreen = () => {
+const JournalScreen = () => {
   return(
     <div className='journal__main-content'>
       <Sidebar />
@@ -15,4 +15,6 @@ export const JournalScreen = () => {
     </div>
   );
 }
+
+export default JournalScreen;
 
