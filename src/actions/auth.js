@@ -5,15 +5,19 @@ import {
 import { types } from '../types/types';
 
 export const startLoginEmailPassword = (email, password) => {
+  console.log(email, password) 
   // this dispatch comes from thunk
   return dispatch => {
-    setTimeout(() => {
-      dispatch(login(123, 'Lisset'));
-    }, 3500);
+    firebase.auth().signInWithEmailAndPassword(email, password)
+      .then(({ user: { uid, displayName } }) => {
+        dispatch(login(uid, displayName));
+      })
+      .catch(console.log());
   }
 }
 
 export const startRegisterWithEmailPasswordName = (email, password, name) => {
+  // this dispatch comes from thunk
   return dispatch => {
     firebase.auth().createUserWithEmailAndPassword(email, password)
       .then(async ({user}) => {
@@ -27,6 +31,7 @@ export const startRegisterWithEmailPasswordName = (email, password, name) => {
 }
 
 export const startGoogleLogin = () => {
+  // this dispatch comes from thunk
   return dispatch => {
     firebase.auth().signInWithPopup(googleAuthProvider)
       .then(({ user: { uid, displayName } }) => {

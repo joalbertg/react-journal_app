@@ -1,23 +1,47 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import validator from 'validator';
 
 import { useForm } from '../../hooks/useForm';
-import { startLoginEmailPassword, startGoogleLogin } from '../../actions/auth';
+import {
+  startLoginEmailPassword,
+  startGoogleLogin
+} from '../../actions/auth';
+import {
+  setError,
+  removeError
+} from '../../actions/ui';
 
 export const LoginScreen = () => {
   const user = {
     email: 'joalbertgonzalez@gmail.com',
-    password: 123456
+    password: '123456'
   };
 
   const dispatch = useDispatch();
+  const { loading, msgError } = useSelector(state => state.ui);
   const [formValues, handleInputChange, handleReset] = useForm(user);
   const { email, password } = formValues;
 
+  const isFormValid = () => {
+    if(!validator.isEmail(email)) {
+      dispatch(setError('Email is not valid'));
+      return false;
+    } else if(password.length < 6) {
+      dispatch(setError('Password should be at least 6 characters'));
+      return false;
+    }
+
+    return true;
+  }
+
   const handleLogin = event => {
     event.preventDefault();
-    dispatch(startLoginEmailPassword(email, password));
+    if(isFormValid()) {
+      dispatch(startLoginEmailPassword(email, password));
+    }
+
     handleReset();
   }
 
@@ -29,6 +53,9 @@ export const LoginScreen = () => {
     <>
       <h3 className='auth__title'>Login</h3>
       <form onSubmit={handleLogin}>
+        { msgError
+            && <div className="auth__alert-error">{msgError}</div>
+        }
         <input
           type='text'
           placeholder='Email'
