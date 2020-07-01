@@ -15,9 +15,8 @@ import JournalScreen from '../components/journal';
 import firebase from '../firebase';
 import {
   setCurrentUser,
-  setNotes
+  startLoadingNotes
 } from '../actions';
-import { loadNotes } from '../helpers';
 
 const AppRouter = () => {
   const dispatch = useDispatch();
@@ -28,12 +27,10 @@ const AppRouter = () => {
     // firebase.auth().onAuthStateChanged()
     // this is an observable, will keep the user's data
     // when reloading the page
-    firebase.auth().onAuthStateChanged(async (user) => {
+    firebase.auth().onAuthStateChanged(user => {
       if(user?.uid) {
         dispatch(setCurrentUser(user.uid, user.displayName));
-
-        const notes = await loadNotes(user.uid);
-        dispatch(setNotes(notes));
+        dispatch(startLoadingNotes(user.uid));
 
         setIsLoggedIn(true);
       } else {

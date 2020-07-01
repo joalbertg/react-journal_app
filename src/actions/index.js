@@ -13,6 +13,6 @@ export {
 
 export {
   startNewEntry,
-  setNotes
+  startLoadingNotes
 } from './notes';
 
