@@ -3,7 +3,6 @@ import { useDispatch } from 'react-redux';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
   Redirect
 } from "react-router-dom";
 
@@ -11,6 +10,8 @@ import { AuthRouter } from './AuthRouter';
 import { JournalScreen } from '../components/journal/JournalScreen';
 import { firebase } from '../firebase/firebase-config';
 import { login } from '../actions/auth';
+import { PublicRoute } from './PublicRoute';
+import { PrivateRoute } from './PrivateRoute';
 
 export const AppRouter = () => {
   const dispatch = useDispatch();
@@ -25,6 +26,8 @@ export const AppRouter = () => {
       if(user?.uid) {
         dispatch(login(user.uid, user.displayName));
         setIsLoggedIn(true);
+      } else {
+        setIsLoggedIn(false);
       }
       setChecking(false);
     });
@@ -40,11 +43,13 @@ export const AppRouter = () => {
     <Router>
       <div>
         <Switch>
-          <Route
+          <PublicRoute
             path='/auth'
+            isLoggedIn={isLoggedIn}
             component={AuthRouter}
           />
-          <Route
+          <PrivateRoute
+            isLoggedIn={isLoggedIn}
             exact path='/'
             component={JournalScreen}
           />
