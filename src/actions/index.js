@@ -4,6 +4,7 @@ export {
 } from './ui';
 
 export {
+  setCurrentUser,
   startLoginEmailPassword,
   startRegisterWithEmailPasswordName,
   startGoogleLogin,
@@ -11,6 +12,7 @@ export {
 } from './auth';
 
 export {
-  startNewEntry
+  startNewEntry,
+  setNotes
 } from './notes';
 

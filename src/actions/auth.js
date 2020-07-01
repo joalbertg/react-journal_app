@@ -54,6 +54,8 @@ export const login = (uid, displayName) => ({
   payload: { uid, displayName }
 });
 
+export const setCurrentUser = login;
+
 export const startLogout = () => {
   return async dispatch => {
     await firebase.auth().signOut();

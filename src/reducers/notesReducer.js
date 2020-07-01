@@ -2,7 +2,7 @@ import types from '../types';
 
 /*
  *  {
- *    notes: [],
+ *    notes: {},
  *    active: null,
  *    active: {
  *      id: 'qwertyui1234567890',
@@ -22,13 +22,17 @@ export const notesReducer = (state = initialState, action) => {
   const { type, payload } = action;
 
   switch(type) {
-    case types.NOTES_NEW_ENTRY:
+    case types.NOTES_ACTIVE:
       return {
         ...state,
-        active: payload
+        //notes: [...state.notes, payload],
+        active: { ...payload }
       };
-    case 1:
-      return {};
+    case types.NOTES_LOAD:
+      return {
+        ...state,
+        notes: { ...payload }
+      };
     default:
       return state;
   }
