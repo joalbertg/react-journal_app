@@ -10,3 +10,7 @@ export {
   startLogout
 } from './auth';
 
+export {
+  startNewEntry
+} from './notes';
+
