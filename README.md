@@ -4,6 +4,7 @@
 
 - [Font Awesome][font_awesome]
 - [Sweetalert 2][sweetalert2]
+- [Moment][momentjs]
 
 - [Redux][reduxjs]
 - [React Redux][react_redux]
@@ -13,6 +14,7 @@
 
 [font_awesome]: https://cdnjs.com/libraries/font-awesome
 [sweetalert2]: https://sweetalert2.github.io/
+[momentjs]: https://momentjs.com/
 
 [reduxjs]: https://es.redux.js.org/
 [react_redux]: https://react-redux.js.org/
@@ -30,7 +32,7 @@ Without dependencies
 docker-compose run app yarn add node-sass react-router-dom
 docker-compose run app yarn add react-redux redux
 docker-compose run app yarn add firebase redux-thunk
-docker-compose run app yarn add validator sweetalert2
+docker-compose run app yarn add validator sweetalert2 moment
 ```
 
 ### Project Structure
