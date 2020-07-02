@@ -25,13 +25,17 @@ export const notesReducer = (state = initialState, action) => {
     case types.NOTES_ACTIVE:
       return {
         ...state,
-        //notes: [...state.notes, payload],
         active: { ...payload }
       };
     case types.NOTES_LOAD:
       return {
         ...state,
         notes: { ...payload }
+      };
+    case types.NOTES_UPDATED:
+      return {
+        ...state,
+        notes: { ...state.notes, [payload.id]: { ...payload.note } }
       };
     default:
       return state;
