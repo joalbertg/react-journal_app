@@ -49,6 +49,7 @@ docker-compose run app yarn add validator sweetalert2 moment
 │   ├── actions
 │   │   ├── auth.js
 │   │   ├── index.js
+│   │   ├── notes.js
 │   │   └── ui.js
 │   ├── components
 │   │   ├── auth
@@ -69,12 +70,16 @@ docker-compose run app yarn add validator sweetalert2 moment
 │   ├── firebase
 │   │   ├── firebase-config.js
 │   │   └── index.js
+│   ├── helpers
+│   │   ├── index.js
+│   │   └── loadNotes.js
 │   ├── hooks
 │   │   └── useForm.js
 │   ├── index.js
 │   ├── reducers
 │   │   ├── authReducer.js
 │   │   ├── index.js
+│   │   ├── notesReducer.js
 │   │   └── uiReducer.js
 │   ├── routers
 │   │   ├── AppRouter.js
@@ -102,8 +107,7 @@ docker-compose run app yarn add validator sweetalert2 moment
 │       └── types.js
 └── yarn.lock
 
-15 directories, 46 files
-
+16 directories, 50 files
 ```
 
 ### Start Project
