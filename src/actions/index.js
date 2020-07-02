@@ -15,6 +15,7 @@ export {
   startNewEntry,
   startLoadingNotes,
   activeNote,
-  startSaveNote
+  startSaveNote,
+  startUploading
 } from './notes';
 

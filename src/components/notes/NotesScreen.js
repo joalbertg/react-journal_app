@@ -6,18 +6,19 @@ import { useForm } from '../../hooks/useForm';
 import { activeNote } from '../../actions';
 
 const NoteScreen = () => {
-  const { active: note } = useSelector(state => state.notes);
-  const [formValues, handleInputChange, handleReset] = useForm(note);
-  const { title, body, url = null } = formValues;
-  const idRef = useRef(note.id);
   const dispatch = useDispatch();
+  const { active: note } = useSelector(state => state.notes);
+
+  const [formValues, handleInputChange, handleReset] = useForm(note);
+  const { title, body } = formValues;
+  const idRef = useRef(note.id);
 
   useEffect(() => {
     if(idRef.current !== note.id) {
       handleReset(note);
       idRef.current = note.id;
     }
-  }, [idRef, handleReset, note]);
+  }, [handleReset, note]);
 
   useEffect(() => {
     dispatch(activeNote(formValues.id, { ...formValues }));
@@ -43,10 +44,11 @@ const NoteScreen = () => {
           value={body}
           onChange={handleInputChange}
         ></textarea>
-        { url &&
+        {
+          note.url &&
             <div className='notes__image'>
               <img
-                src='https://www.landuum.com/wp-content/uploads/2018/11/hill-rond-nature-landart-04-300x200.jpg'
+                src={note.url}
                 alt='test-img'
               />
             </div>

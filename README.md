@@ -5,6 +5,7 @@
 - [Font Awesome][font_awesome]
 - [Sweetalert 2][sweetalert2]
 - [Moment][momentjs]
+- [Cloudinary][cloudinary]
 
 - [Redux][reduxjs]
 - [React Redux][react_redux]
@@ -15,6 +16,7 @@
 [font_awesome]: https://cdnjs.com/libraries/font-awesome
 [sweetalert2]: https://sweetalert2.github.io/
 [momentjs]: https://momentjs.com/
+[cloudinary]: https://cloudinary.com/
 
 [reduxjs]: https://es.redux.js.org/
 [react_redux]: https://react-redux.js.org/
