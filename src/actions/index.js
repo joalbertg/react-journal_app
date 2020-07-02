@@ -14,6 +14,7 @@ export {
 export {
   startNewEntry,
   startLoadingNotes,
-  activeNote
+  activeNote,
+  startSaveNote
 } from './notes';
 
