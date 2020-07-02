@@ -6,7 +6,7 @@ import {
   startSaveNote,
   startUploading
 } from '../../actions';
-//react-journal
+
 export const NotesAppBar = () => {
   const dispatch = useDispatch();
   const { active: note } = useSelector(state => state.notes);

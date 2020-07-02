@@ -35,8 +35,14 @@ export const notesReducer = (state = initialState, action) => {
     case types.NOTES_UPDATED:
       return {
         ...state,
-        notes: { ...state.notes, [payload.id]: { ...payload.note } }
+        notes: { ...state.notes, [payload.id]: { ...payload } }
       };
+    case types.NOTES_DELETE:
+      delete state.notes[payload.id];
+      return {
+        ...state,
+        active: null
+      }
     default:
       return state;
   }

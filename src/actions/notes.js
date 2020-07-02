@@ -45,21 +45,15 @@ export const startSaveNote = note => {
     delete noteToFirestore.id;
 
     await db.doc(`${uid}/journal/notes/${note.id}`).update(noteToFirestore);
-    dispatch(refreshNote(note.id, noteToFirestore));
+    dispatch(refreshNote({id: note.id, ...noteToFirestore }));
 
     Swal.fire('Saved', note.title, 'success');
   }
 }
 
-export const refreshNote = (id, note) => ({
+export const refreshNote = note => ({
   type: types.NOTES_UPDATED,
-  payload: {
-    id,
-    note: {
-      id,
-      ...note
-    }
-  }
+  payload: note
 });
 
 export const startUploading = file => {
@@ -82,4 +76,20 @@ export const startUploading = file => {
     dispatch(startSaveNote(note));
   }
 }
+
+export const startDeleting = () => {
+  return async (dispatch, getState) => {
+    const { uid } = getState().auth;
+    const { id } = getState().notes.active;
+
+    await db.doc(`${uid}/journal/notes/${id}`).delete();
+
+    dispatch(deleteNote(id));
+  }
+}
+
+export const deleteNote = id  => ({
+  type: types.NOTES_DELETE,
+  payload: { id }
+});
 
