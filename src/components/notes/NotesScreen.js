@@ -53,7 +53,7 @@ const NoteScreen = () => {
             <div className='notes__image'>
               <img
                 src={note.url}
-                alt='test-img'
+                alt={note.filename}
               />
             </div>
         }

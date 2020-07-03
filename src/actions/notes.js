@@ -69,9 +69,10 @@ export const startUploading = file => {
       }
     });
 
-    const url = await fileUpload(file);
+    const { secure_url: url, original_filename: filename } = await fileUpload(file);
 
     note.url = url;
+    note.filename = filename;
     Swal.close();
     dispatch(startSaveNote(note));
   }
