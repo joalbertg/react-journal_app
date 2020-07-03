@@ -1,11 +1,11 @@
 import Swal from 'sweetalert2';
 
-import { db } from '../firebase';
+import { db } from '~firebase';
 import {
   loadNotes,
   fileUpload
-} from '../helpers';
-import types from '../types';
+} from '~helpers';
+import types from '~types';
 
 export const startNewEntry = () => {
   return async (dispatch, getState) => {

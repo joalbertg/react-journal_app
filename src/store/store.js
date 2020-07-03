@@ -10,7 +10,7 @@ import {
   authReducer,
   uiReducer,
   notesReducer
-} from '../reducers';
+} from '~reducers';
 
 const reducers = combineReducers({
   auth: authReducer,

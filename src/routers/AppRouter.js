@@ -11,12 +11,12 @@ import {
   PublicRoute,
   AuthRouter
 } from './';
-import JournalScreen from '../components/journal';
-import firebase from '../firebase';
+import JournalScreen from '~components/journal';
+import firebase from '~firebase';
 import {
   setCurrentUser,
   startLoadingNotes
-} from '../actions';
+} from '~actions';
 
 const AppRouter = () => {
   const dispatch = useDispatch();

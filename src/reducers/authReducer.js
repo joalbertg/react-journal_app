@@ -1,4 +1,4 @@
-import { types } from '../types/types';
+import types from '~types';
 
 export const authReducer = (state = {}, action) => {
   const { type, payload } = action;

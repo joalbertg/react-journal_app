@@ -8,7 +8,7 @@ import {
 import {
   LoginScreen,
   RegisterScreen
-} from '../components/auth';
+} from '~components/auth';
 
 export const AuthRouter = () => {
   return(

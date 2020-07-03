@@ -5,8 +5,10 @@
 - [Font Awesome][font_awesome]
 - [Animate CSS][animate_st]
 - [Sweetalert 2][sweetalert2]
+
 - [Moment][momentjs]
 - [Cloudinary][cloudinary]
+- [Link module alias][link_module_alias]
 
 - [Redux][reduxjs]
 - [React Redux][react_redux]
@@ -17,8 +19,10 @@
 [font_awesome]: https://cdnjs.com/libraries/font-awesome
 [animate_st]: https://animate.style/
 [sweetalert2]: https://sweetalert2.github.io/
+
 [momentjs]: https://momentjs.com/
 [cloudinary]: https://cloudinary.com/
+[link_module_alias]: https://github.com/Rush/link-module-alias
 
 [reduxjs]: https://es.redux.js.org/
 [react_redux]: https://react-redux.js.org/
@@ -37,6 +41,7 @@ docker-compose run app yarn add node-sass react-router-dom
 docker-compose run app yarn add react-redux redux
 docker-compose run app yarn add firebase redux-thunk
 docker-compose run app yarn add validator sweetalert2 moment
+docker-compose run app yarn add link-module-alias --dev
 ```
 
 ### Project Structure
@@ -122,4 +127,39 @@ docker-compose run app yarn add validator sweetalert2 moment
 ### Tests
 
 > run `docker-compose run app yarn test`
+
+#### Link module alias
+
+> run `docker-compose run app yarn preinstall` for clean alias.
+
+> run `docker-compose run app yarn postinstall` for generate alias.
+
+```json
+...
+"scripts": {
+  ...
+  "preinstall": "command -v link-module-alias && link-module-alias clean || true",
+  "postinstall": "link-module-alias"
+},
+"_moduleAliases": {
+  "~root": ".",
+  "~src" : "./src",
+  "~styles": "./src/styles/styles.scss"
+},
+...
+```
+
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import App from '~src/JournalApp';
+
+import '~styles';
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+);
+```
 

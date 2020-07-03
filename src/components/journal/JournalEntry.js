@@ -2,7 +2,7 @@ import React from 'react';
 import moment from 'moment';
 import { useDispatch } from 'react-redux';
 
-import { activeNote } from '../../actions';
+import { activeNote } from '~actions';
 
 export const JournalEntry = ({ note }) => {
   const { id, title, body, date, url } = note;

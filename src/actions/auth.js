@@ -1,11 +1,11 @@
 import Swal from 'sweetalert2';
 
-import firebase, { googleAuthProvider } from '../firebase';
+import firebase, { googleAuthProvider } from '~firebase';
 import {
   startLoading,
   finishLoading
 } from './ui';
-import types from '../types';
+import types from '~types';
 
 export const startLoginEmailPassword = (email, password) => {
   // this dispatch comes from thunk

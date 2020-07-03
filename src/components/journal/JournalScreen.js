@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 
 import { Sidebar } from './Sidebar';
 import { NothingSelected } from './NothingSelected';
-import NoteScreen from '../notes';
+import NoteScreen from '~components/notes';
 
 const JournalScreen = () => {
   const { active } = useSelector(state => state.notes);

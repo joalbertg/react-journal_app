@@ -5,7 +5,7 @@ import moment from 'moment';
 import {
   startSaveNote,
   startUploading
-} from '../../actions';
+} from '~actions';
 
 export const NotesAppBar = () => {
   const dispatch = useDispatch();

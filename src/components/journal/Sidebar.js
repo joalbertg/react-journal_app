@@ -6,7 +6,7 @@ import {
   startLogout,
   startNewEntry,
   cleanNotes
-} from '../../actions';
+} from '~actions';
 
 export const Sidebar = () => {
   const dispatch = useDispatch();

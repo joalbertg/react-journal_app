@@ -27,7 +27,23 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "preinstall": "command -v link-module-alias && link-module-alias clean || true",
+    "postinstall": "link-module-alias",
+    "alias:build": "yarn preinstall && yarn postinstall"
+  },
+  "_moduleAliases": {
+    "~root": ".",
+    "~src" : "./src",
+    "~actions" : "./src/actions",
+    "~components" : "./src/components",
+    "~firebase" : "./src/firebase",
+    "~helpers" : "./src/helpers",
+    "~hooks" : "./src/hooks",
+    "~reducers" : "./src/reducers",
+    "~store" : "./src/store",
+    "~styles": "./src/styles/styles.scss",
+    "~types": "./src/types"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -43,5 +59,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "link-module-alias": "^1.2.0"
   }
 }

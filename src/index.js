@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './JournalApp';
+import App from '~src/JournalApp';
 
-import './styles/styles.scss';
+import '~styles';
 
 ReactDOM.render(
   <App />,

@@ -1,4 +1,4 @@
-import { db } from '../firebase';
+import { db } from '~firebase';
 
 export const loadNotes = async (uid) => {
   const notesSnap = await db.collection(`${uid}/journal/notes`).get();
