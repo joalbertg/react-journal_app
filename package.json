@@ -34,14 +34,14 @@
   },
   "_moduleAliases": {
     "~root": ".",
-    "~src" : "./src",
-    "~actions" : "./src/actions",
-    "~components" : "./src/components",
-    "~firebase" : "./src/firebase",
-    "~helpers" : "./src/helpers",
-    "~hooks" : "./src/hooks",
-    "~reducers" : "./src/reducers",
-    "~store" : "./src/store",
+    "~src": "./src",
+    "~actions": "./src/actions",
+    "~components": "./src/components",
+    "~firebase": "./src/firebase",
+    "~helpers": "./src/helpers",
+    "~hooks": "./src/hooks",
+    "~reducers": "./src/reducers",
+    "~store": "./src/store",
     "~styles": "./src/styles/styles.scss",
     "~types": "./src/types"
   },
@@ -61,6 +61,9 @@
     ]
   },
   "devDependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "enzyme-to-json": "^3.5.0",
     "link-module-alias": "^1.2.0"
   }
 }
