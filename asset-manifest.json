@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/joalbertg/react-journal_app/static/css/main.4abcfe25.chunk.css",
-    "main.js": "/joalbertg/react-journal_app/static/js/main.82b1cfc7.chunk.js",
-    "main.js.map": "/joalbertg/react-journal_app/static/js/main.82b1cfc7.chunk.js.map",
-    "runtime-main.js": "/joalbertg/react-journal_app/static/js/runtime-main.bf958eb3.js",
-    "runtime-main.js.map": "/joalbertg/react-journal_app/static/js/runtime-main.bf958eb3.js.map",
-    "static/js/2.fe38b1f3.chunk.js": "/joalbertg/react-journal_app/static/js/2.fe38b1f3.chunk.js",
-    "static/js/2.fe38b1f3.chunk.js.map": "/joalbertg/react-journal_app/static/js/2.fe38b1f3.chunk.js.map",
-    "index.html": "/joalbertg/react-journal_app/index.html",
-    "precache-manifest.2477ee9b29360061a28dc814ed7624f4.js": "/joalbertg/react-journal_app/precache-manifest.2477ee9b29360061a28dc814ed7624f4.js",
-    "service-worker.js": "/joalbertg/react-journal_app/service-worker.js",
-    "static/css/main.4abcfe25.chunk.css.map": "/joalbertg/react-journal_app/static/css/main.4abcfe25.chunk.css.map",
-    "static/js/2.fe38b1f3.chunk.js.LICENSE.txt": "/joalbertg/react-journal_app/static/js/2.fe38b1f3.chunk.js.LICENSE.txt"
+    "main.css": "/react-journal_app/static/css/main.4abcfe25.chunk.css",
+    "main.js": "/react-journal_app/static/js/main.82b1cfc7.chunk.js",
+    "main.js.map": "/react-journal_app/static/js/main.82b1cfc7.chunk.js.map",
+    "runtime-main.js": "/react-journal_app/static/js/runtime-main.52be2eff.js",
+    "runtime-main.js.map": "/react-journal_app/static/js/runtime-main.52be2eff.js.map",
+    "static/js/2.fe38b1f3.chunk.js": "/react-journal_app/static/js/2.fe38b1f3.chunk.js",
+    "static/js/2.fe38b1f3.chunk.js.map": "/react-journal_app/static/js/2.fe38b1f3.chunk.js.map",
+    "index.html": "/react-journal_app/index.html",
+    "precache-manifest.95e28c7b7f62cca03834afd4fc672950.js": "/react-journal_app/precache-manifest.95e28c7b7f62cca03834afd4fc672950.js",
+    "service-worker.js": "/react-journal_app/service-worker.js",
+    "static/css/main.4abcfe25.chunk.css.map": "/react-journal_app/static/css/main.4abcfe25.chunk.css.map",
+    "static/js/2.fe38b1f3.chunk.js.LICENSE.txt": "/react-journal_app/static/js/2.fe38b1f3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.bf958eb3.js",
+    "static/js/runtime-main.52be2eff.js",
     "static/js/2.fe38b1f3.chunk.js",
     "static/css/main.4abcfe25.chunk.css",
     "static/js/main.82b1cfc7.chunk.js"
