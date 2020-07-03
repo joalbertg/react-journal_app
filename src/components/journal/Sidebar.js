@@ -4,7 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { JournalEntries } from './JournalEntries';
 import {
   startLogout,
-  startNewEntry
+  startNewEntry,
+  cleanNotes
 } from '../../actions';
 
 export const Sidebar = () => {
@@ -12,6 +13,7 @@ export const Sidebar = () => {
   const { name } = useSelector(state => state.auth);
   const handleLogout = () => {
     dispatch(startLogout());
+    dispatch(cleanNotes());
   }
 
   const handleNewEntry = () => {

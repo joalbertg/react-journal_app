@@ -3,6 +3,7 @@
 - [React Router][react_router]
 
 - [Font Awesome][font_awesome]
+- [Animate CSS][animate_st]
 - [Sweetalert 2][sweetalert2]
 - [Moment][momentjs]
 - [Cloudinary][cloudinary]
@@ -14,6 +15,7 @@
 [react_router]: https://reacttraining.com/react-router/web/guides/quick-start
 
 [font_awesome]: https://cdnjs.com/libraries/font-awesome
+[animate_st]: https://animate.style/
 [sweetalert2]: https://sweetalert2.github.io/
 [momentjs]: https://momentjs.com/
 [cloudinary]: https://cloudinary.com/
@@ -73,6 +75,7 @@ docker-compose run app yarn add validator sweetalert2 moment
 │   │   ├── firebase-config.js
 │   │   └── index.js
 │   ├── helpers
+│   │   ├── fileUpload.js
 │   │   ├── index.js
 │   │   └── loadNotes.js
 │   ├── hooks
@@ -109,7 +112,7 @@ docker-compose run app yarn add validator sweetalert2 moment
 │       └── types.js
 └── yarn.lock
 
-16 directories, 50 files
+16 directories, 51 files
 ```
 
 ### Start Project

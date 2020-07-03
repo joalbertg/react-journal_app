@@ -23,9 +23,18 @@ export const notesReducer = (state = initialState, action) => {
 
   switch(type) {
     case types.NOTES_ACTIVE:
+      let active = null;
+
+      if(state.active?.id === payload.id) {
+        active = { ...state.active, ...payload }
+      } else {
+        active = { ...payload }
+      }
+
       return {
         ...state,
-        active: { ...payload }
+        active,
+        notes: { ...state.notes, [payload.id]: { ...payload } }
       };
     case types.NOTES_LOAD:
       return {
@@ -42,7 +51,12 @@ export const notesReducer = (state = initialState, action) => {
       return {
         ...state,
         active: null
-      }
+      };
+    case types.NOTES_LOGOUT_CLEANING:
+      return {
+        notes: {},
+        active: null
+      };
     default:
       return state;
   }
