@@ -36,6 +36,7 @@
     "~root": ".",
     "~src": "./src",
     "~actions": "./src/actions",
+    "~cloudinary": "./src/cloudinary",
     "~components": "./src/components",
     "~firebase": "./src/firebase",
     "~helpers": "./src/helpers",
@@ -61,6 +62,7 @@
     ]
   },
   "devDependencies": {
+    "cloudinary": "^1.22.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.5.0",

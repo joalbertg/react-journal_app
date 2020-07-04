@@ -41,7 +41,7 @@ docker-compose run app yarn add node-sass react-router-dom
 docker-compose run app yarn add react-redux redux
 docker-compose run app yarn add firebase redux-thunk
 docker-compose run app yarn add validator sweetalert2 moment
-docker-compose run app yarn add link-module-alias --dev
+docker-compose run app yarn add link-module-alias cloudinary --dev
 ```
 
 ### Project Structure

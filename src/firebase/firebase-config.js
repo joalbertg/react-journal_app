@@ -3,13 +3,13 @@ import 'firebase/firestore';
 import 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDYFs-fFuGFXpDC3ui1C_L6ibz7EPYA4ac",
-  authDomain: "udemy-journal-app.firebaseapp.com",
-  databaseURL: "https://udemy-journal-app.firebaseio.com",
-  projectId: "udemy-journal-app",
-  storageBucket: "udemy-journal-app.appspot.com",
-  messagingSenderId: "436566690299",
-  appId: "1:436566690299:web:f25ac388ef939cd938235e"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  databaseURL: process.env.REACT_APP_FIREBASE_DATABASE_URL,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID
 };
 
 // Initialize Firebase
