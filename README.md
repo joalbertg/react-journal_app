@@ -60,6 +60,9 @@ docker-compose run app yarn add link-module-alias cloudinary --dev
 │   │   ├── index.js
 │   │   ├── notes.js
 │   │   └── ui.js
+│   ├── cloudinary
+│   │   ├── cloudinary-config.js
+│   │   └── index.js
 │   ├── components
 │   │   ├── auth
 │   │   │   ├── LoginScreen.js
@@ -97,6 +100,7 @@ docker-compose run app yarn add link-module-alias cloudinary --dev
 │   │   ├── PrivateRoute.js
 │   │   ├── PublicRoute.js
 │   │   └── index.js
+│   ├── setupTests.js
 │   ├── store
 │   │   ├── index.js
 │   │   └── store.js
@@ -112,12 +116,24 @@ docker-compose run app yarn add link-module-alias cloudinary --dev
 │   │   │   ├── _notes.scss
 │   │   │   └── _nothing.scss
 │   │   └── styles.scss
+│   ├── tests
+│   │   ├── actions
+│   │   │   └── ui.test.js
+│   │   ├── components
+│   │   ├── fixtures
+│   │   │   └── demoAuth.js
+│   │   ├── helpers
+│   │   │   └── fileUpload.test.js
+│   │   ├── reducers
+│   │   │   └── authReducer.test.js
+│   │   └── types
+│   │       └── types.test.js
 │   └── types
 │       ├── index.js
 │       └── types.js
 └── yarn.lock
 
-16 directories, 51 files
+24 directories, 59 files
 ```
 
 ### Start Project
