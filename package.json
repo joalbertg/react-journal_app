@@ -42,6 +42,7 @@
     "~helpers": "./src/helpers",
     "~hooks": "./src/hooks",
     "~reducers": "./src/reducers",
+    "~routers": "./src/routers",
     "~store": "./src/store",
     "~styles": "./src/styles/styles.scss",
     "~types": "./src/types"
