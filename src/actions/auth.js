@@ -11,7 +11,8 @@ export const startLoginEmailPassword = (email, password) => {
   // this dispatch comes from thunk
   return dispatch => {
     dispatch(startLoading());
-    firebase.auth().signInWithEmailAndPassword(email, password)
+
+    return firebase.auth().signInWithEmailAndPassword(email, password)
       .then(({ user: { uid, displayName } }) => {
         dispatch(login(uid, displayName));
         dispatch(finishLoading());
