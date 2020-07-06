@@ -118,8 +118,16 @@ docker-compose run app yarn add link-module-alias cloudinary redux-mock-store --
 │   │   └── styles.scss
 │   ├── tests
 │   │   ├── actions
+│   │   │   ├── auth.test.js
+│   │   │   ├── notes.test.js
 │   │   │   └── ui.test.js
 │   │   ├── components
+│   │   │   └── auth
+│   │   │       ├── LoginScreen.test.js
+│   │   │       ├── RegisterScreen.test.js
+│   │   │       └── __snapshots__
+│   │   │           ├── LoginScreen.test.js.snap
+│   │   │           └── RegisterScreen.test.js.snap
 │   │   ├── fixtures
 │   │   │   └── demoAuth.js
 │   │   ├── helpers
@@ -133,7 +141,7 @@ docker-compose run app yarn add link-module-alias cloudinary redux-mock-store --
 │       └── types.js
 └── yarn.lock
 
-24 directories, 59 files
+26 directories, 65 files
 ```
 
 ### Start Project
