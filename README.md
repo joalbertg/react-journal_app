@@ -122,18 +122,30 @@ docker-compose run app yarn add link-module-alias cloudinary redux-mock-store --
 │   │   │   ├── notes.test.js
 │   │   │   └── ui.test.js
 │   │   ├── components
-│   │   │   └── auth
-│   │   │       ├── LoginScreen.test.js
-│   │   │       ├── RegisterScreen.test.js
+│   │   │   ├── auth
+│   │   │   │   ├── LoginScreen.test.js
+│   │   │   │   ├── RegisterScreen.test.js
+│   │   │   │   └── __snapshots__
+│   │   │   │       ├── LoginScreen.test.js.snap
+│   │   │   │       └── RegisterScreen.test.js.snap
+│   │   │   ├── journal
+│   │   │   │   ├── JournalEntry.test.js
+│   │   │   │   ├── Sidebar.test.js
+│   │   │   │   └── __snapshots__
+│   │   │   │       ├── JournalEntry.test.js.snap
+│   │   │   │       └── Sidebar.test.js.snap
+│   │   │   └── notes
+│   │   │       ├── NotesScreen.test.js
 │   │   │       └── __snapshots__
-│   │   │           ├── LoginScreen.test.js.snap
-│   │   │           └── RegisterScreen.test.js.snap
+│   │   │           └── NotesScreen.test.js.snap
 │   │   ├── fixtures
 │   │   │   └── demoAuth.js
 │   │   ├── helpers
 │   │   │   └── fileUpload.test.js
 │   │   ├── reducers
 │   │   │   └── authReducer.test.js
+│   │   ├── routers
+│   │   │   └── AppRouter.test.js
 │   │   └── types
 │   │       └── types.test.js
 │   └── types
@@ -141,7 +153,7 @@ docker-compose run app yarn add link-module-alias cloudinary redux-mock-store --
 │       └── types.js
 └── yarn.lock
 
-26 directories, 65 files
+31 directories, 72 files
 ```
 
 ### Start Project
@@ -150,7 +162,9 @@ docker-compose run app yarn add link-module-alias cloudinary redux-mock-store --
 
 ### Tests
 
-> run `docker-compose run app yarn test`
+> run `docker-compose run app yarn test --runInBand`
+
+> run `docker-compose run app yarn test --maxWorkers=4`
 
 #### Link module alias
 
